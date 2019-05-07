@@ -25,7 +25,7 @@ mvn install
 ```
 
 ## API reference
-### Create transfer
+### Create Transfer
 Initiating a new transfer to be processed. After a quote is allocated to the transfer, a transaction will be created and sent for processing.
 
 For each new transfer request, a unique idempotence identifier must be provided is the _x-idempotence-id_ header.
