@@ -32,7 +32,7 @@ For each new transfer request, a unique idempotence identifier must be provided 
 
 ``/api/v1/transfer`` **POST**
 
-####Example request
+#### Example request
 Headers:
 
 ```
@@ -47,7 +47,7 @@ Content-Type: application/json; version=1
 }
 ```
 
-####Example response
+#### Example response
 ```
 {
     "reference": "c365509f-091a-4fe7-a047-87a21ac4ba49",
