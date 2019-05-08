@@ -9,7 +9,7 @@ import java.sql.Statement;
 
 public class AccountDaoImpl implements AccountDao {
 
-    private Statement statement = H2DbManager.getStatement();
+    private final Statement statement = H2DbManager.getStatement();
 
     @Override
     public Account findById(String accountId) {

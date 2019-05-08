@@ -71,6 +71,8 @@ public class TransferFacadeTest {
         doReturn(sourceAccount).when(accountService).getAccount(sourceAccountId);
         doReturn(targetAccount).when(accountService).getAccount(targetAccountId);
 
+        doReturn(BigDecimal.ONE).when(fxService).getFxRate(sourceAccount.getCurrency(), targetAccount.getCurrency());
+
         transferFacade.transfer(transferRequest, context);
     }
 
