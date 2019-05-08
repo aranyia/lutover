@@ -1,7 +1,5 @@
 package org.lutover.app.handlers;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
 import org.eclipse.jetty.http.HttpStatus;
 import org.lutover.app.api.v1.ErrorResponse;
 import org.lutover.app.mapper.ContextMapper;
@@ -10,6 +8,9 @@ import spark.Request;
 import spark.Response;
 import spark.Route;
 
+/**
+ * Handles unexpected internal exceptions to map them to standardized error responses.
+ */
 public class InternalServerErrorHandler implements Route {
 
     @Override
@@ -27,7 +28,6 @@ public class InternalServerErrorHandler implements Route {
         if (context != null) {
             errorResponse.setIdempotenceId(context.getIdempotenceId());
         }
-
         return errorResponse;
     }
 }
