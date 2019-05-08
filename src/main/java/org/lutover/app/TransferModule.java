@@ -6,7 +6,6 @@ import org.lutover.data.dao.AccountDao;
 import org.lutover.data.dao.AccountDaoImpl;
 import org.lutover.data.dao.FxRateDao;
 import org.lutover.data.dao.FxRateDaoImpl;
-import org.lutover.data.dao.H2DbManager;
 import org.lutover.data.dao.TransactionDao;
 import org.lutover.data.dao.TransactionDaoImpl;
 import org.lutover.service.AccountService;
@@ -46,10 +45,5 @@ public class TransferModule extends AbstractModule {
     @Provides
     public ContextHolder getContextHolder() {
         return new ContextHolder();
-    }
-
-    @Provides
-    public H2DbManager getDbManager() {
-        return new H2DbManager();
     }
 }
